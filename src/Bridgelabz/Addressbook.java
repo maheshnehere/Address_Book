@@ -1,7 +1,7 @@
 package Bridgelabz;
 import java.util.*;
 public class Addressbook {
-
+    public static ArrayList<String> contact = new ArrayList<>();
     static Scanner Input = new Scanner(System.in);
     static String firstName,lastName,address,city,state,email,zip,phoneNo;
 
@@ -41,9 +41,29 @@ public class Addressbook {
         AddressBook student = new AddressBook(firstName, lastName, address, city, state, zip, phoneNo, email);
         System.out.println(student.toString());
     }
+
+    public static void add(){
+        contact.add(firstName);
+        contact.add(lastName);
+        contact.add(address);
+        contact.add(city);
+        contact.add(state);
+        contact.add(zip);
+        contact.add(phoneNo);
+        contact.add(email);
+
+        System.out.println("contact added Successfully");
+        for(String run : contact) {
+           System.out.println(run);
+         }
+    }
+
+
     public static void main(String[] args) {
         create();
-    }
-}
+        add();
+        }
+     }
+
     
 
