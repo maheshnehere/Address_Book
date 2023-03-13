@@ -58,12 +58,38 @@ public class Addressbook {
          }
     }
 
+    public static void edit(){
+        System.out.println("Choose Element to edit and press number accordingly");
+        System.out.println("0.firstName ,1.lastName, 2.address, 3.city, 4.state, 5.zip, 6.phoneNo, 7.email");
+        int choice = Input.nextInt();
 
+        switch (choice){
+            case 0 : contact.set(0,Input.next());break;
+            case 1 : contact.set(1,Input.next());break;
+            case 2 : contact.set(2,Input.next());break;
+            case 3 : contact.set(3,Input.next());break;
+            case 4 : contact.set(4,Input.next());break;
+            case 5 : contact.set(5,Input.next());break;
+            case 6 : contact.set(6,Input.next());break;
+            case 7 : contact.set(7,Input.next());break;
+            default:
+                System.out.println("You made wrong choice");
+        }
+
+        System.out.println("contact added Successfully");
+        for(String run : contact) {
+            System.out.println(run);
+        }
+
+    }
     public static void main(String[] args) {
         create();
         add();
-        }
+        edit();
+    }
      }
+
+        
 
     
 
