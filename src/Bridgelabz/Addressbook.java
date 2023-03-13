@@ -82,11 +82,27 @@ public class Addressbook {
         }
 
     }
+
+    public static void delete(){
+        System.out.println("Enter name to delete contact =" );
+        String name = Input.next();
+        if(name.equals(contact.get(0))){
+            for(int i=0 ;i>contact.size() ;i++){
+                contact.remove(i);
+            }
+        }else {
+            System.out.println("Enter valid name = ");
+        }
+        System.out.println("Contact deleted Successfully.");
+    }
     public static void main(String[] args) {
         create();
         add();
         edit();
+        delete();
+
     }
+    
      }
 
         
